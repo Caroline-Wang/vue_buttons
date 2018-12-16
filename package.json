@@ -1,0 +1,25 @@
+{
+  "name": "vue_buttons",
+  "version": "1.0.0",
+  "description": "a vue buttons component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caroline-Wang/vue_buttons.git"
+  },
+  "keywords": [
+    "vue",
+    "ui",
+    "buttons",
+    "component"
+  ],
+  "author": "Caroline",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Caroline-Wang/vue_buttons/issues"
+  },
+  "homepage": "https://github.com/Caroline-Wang/vue_buttons#readme"
+}
