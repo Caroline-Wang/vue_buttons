@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Caroline-Wang/vue_buttons/issues"
   },
-  "homepage": "https://github.com/Caroline-Wang/vue_buttons#readme"
+  "homepage": "https://github.com/Caroline-Wang/vue_buttons#readme",
+  "dependencies": {
+    "vue": "^2.5.21"
+  }
 }
