@@ -7,27 +7,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue_buttons</title>
     <style>
-        *{margin: 0;padding: 0;box-sizing: border-box;}
-        html{
-            --button-height:32px;
-            --font-size:14px;
-            --button-bg:white;
-            --button-active-bg:#eee;
-            --border-radius:4px;
-            --color:#333;
-            --border-color:#999;
-            --border-color-hover:#666;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body{
-            font-size:var(--font-size);
+
+        html {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
         }
+
+        body {
+            font-size: var(--font-size);
+            padding: 20px;
+        }
+
+
     </style>
 </head>
 <body>
-    <div id="app">
-        <caro-button></caro-button>
-    </div>
+<div id="app">
+    <!--<caro-button text="按钮按钮"/>-->
+    <caro-button
+        svg="settings" icon-position="right"
+        :loading="loading" @click-me="loading=!loading"
+    >
+        测试
+    </caro-button>
 
-    <script src="src/app.js"></script>
+    <hr/>
+
+    <caro-button-group>
+        <caro-button svg="settings" icon-position="left" >
+            我爱js11
+        </caro-button>
+        <caro-button svg="settings" icon-position="right">
+            我爱js22
+        </caro-button>
+        <caro-button svg="settings" icon-position="left">
+            我爱js33
+        </caro-button>
+    </caro-button-group>
+
+    <div id="unitTest">
+
+    </div>
+</div>
+
+<script src="src/app.js"></script>
+<script src="//at.alicdn.com/t/font_968374_ijx9asjenj.js"></script>
 </body>
 </html>
