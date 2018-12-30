@@ -18,7 +18,10 @@ new Vue({
 })
 
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 const expect = chai.expect
+const should = chai.should
 
 //第一个测试用例：测试svg属性
 {
@@ -73,4 +76,26 @@ const expect = chai.expect
     vm.$el.remove()
     vm.$destroy()
     console.log('测试完毕3')
+}
+//第四个测试用例：测试click事件
+{
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+        propsData:{
+            svg:'settings'
+        }
+    })
+    vm.$mount()
+
+    const spyFn = chai.spy(function () {
+        console.log('this is spy content')
+    })
+    vm.$on('click',spyFn)
+
+    // vm.$el.click()
+    vm.$emit('click')
+    vm.$el.remove()
+    vm.$destroy()
+    expect(spyFn).to.have.been.called()
+    console.log('测试完毕4')
 }
